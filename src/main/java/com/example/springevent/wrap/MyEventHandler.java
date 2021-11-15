@@ -1,13 +1,13 @@
 package com.example.springevent.wrap;
 
-import org.springframework.context.ApplicationListener;
+import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MyEventHandler implements ApplicationListener<MyEvent> {
+public class MyEventHandler {
 
-    @Override
-    public void onApplicationEvent(MyEvent event) {
+    @EventListener
+    public void onMyEvent(MyEvent event) {
         System.out.println("First event handling, data: " + event.getData());
     }
 }
