@@ -8,6 +8,7 @@ public class AnotherEventHandler {
 
     @EventListener
     public void onMyEvent(MyEvent event) {
+        System.out.println(Thread.currentThread());
         System.out.println("Another event handling, data: " + event.getData());
     }
 }
